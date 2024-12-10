@@ -116,7 +116,7 @@ EXAMPLES = """
   community.grafana.grafana_dashboard:
     grafana_url: http://grafana.company.com
     grafana_api_key: "{{ grafana_api_key }}"
-    foldehttps://github.com/ansible-collections/community.grafana/r: public
+    folder: public
     dashboard_url: https://grafana.com/api/dashboards/6098/revisions/1/download
 
 - name: Import Grafana dashboard zabbix in a subfolder
