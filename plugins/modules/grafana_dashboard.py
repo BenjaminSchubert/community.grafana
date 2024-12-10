@@ -250,7 +250,7 @@ def grafana_folder_exists(module, grafana_url, folder_name, parent_uid, headers)
     try:
         url = "%s/api/folders" % grafana_url
         if parent_uid:
-            url = "%s/parentUid=%s" % (url, parent_uid)
+            url = "%s?parentUid=%s" % (url, parent_uid)
 
         r, info = fetch_url(module, url, headers=headers, method="GET")
 
