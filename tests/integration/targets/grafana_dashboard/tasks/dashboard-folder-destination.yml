@@ -43,6 +43,9 @@
       community.grafana.grafana_folder:
         title: parent_folder
         state: present
+        url: "{{ grafana_url }}"
+        url_username: "{{ grafana_username }}"
+        url_password: "{{ grafana_password }}"
       register: parent_folder
 
     - name: Create the dashboard in the folder
@@ -70,6 +73,9 @@
         title: sub_folder
         parent_uid: "{{ parent_folder.folder.uid }}"
         state: present
+        url: "{{ grafana_url }}"
+        url_username: "{{ grafana_username }}"
+        url_password: "{{ grafana_password }}"
       register: sub_folder
 
     - name: Create the dashboard in the subfolder
